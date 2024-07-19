@@ -1,17 +1,13 @@
-#===============================================================
-###   Get Time(s) and Acc(g) data
-#===============================================================
 import pandas as pd
 
 def read_csv_file(file_name):
+    """
+    Reads a CSV file and returns a DataFrame.
+
+    Parameters:
+    file_name (str): The path to the CSV file.
+
+    Returns:
+    pd.DataFrame: The data from the CSV file.
+    """
     return pd.read_csv(file_name)
-
-def get_time_acc(filename,TimeCol, AccCol):
-    df = pd.read_csv(filename)
-
-    time = df[TimeCol]
-    acc = df[AccCol]
-
-    return time, acc
-
-#===============================================================
